@@ -3,7 +3,7 @@ import React from 'react';
 const Page = () => {
     return (
         <div>
-            This is an unprotected page
+            This is should be unprotected....
         </div>
     );
 };

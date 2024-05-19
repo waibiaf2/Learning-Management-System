@@ -1,12 +1,15 @@
-import {Button} from "@/components/ui/button";
+import {SignedIn, SignedOut, SignInButton, UserButton} from "@clerk/nextjs";
 
 export default function Home() {
     return (
-        <>
-            <p className="text-4xl uppercase text-red-700">This is a protected page</p>
-            <Button>
-                Click Me
-            </Button>
-        </>
+        <div>
+            <SignedOut>
+                <SignInButton />
+            </SignedOut>
+            <SignedIn>
+                <UserButton />
+            </SignedIn>
+            <p className="text-2xl text-blue-700 uppercase">Home page</p>
+        </div>
     );
 }

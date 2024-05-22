@@ -18,7 +18,7 @@ const NavbarRoutes = () => {
                 isTeacherPage || isPlayerPage ? (
                     <Link href="/">
                         <Button size="sm" variant="ghost">
-                            <LogOut className="h-4 w-4 mr-3"/>
+                            <LogOut className="h-4 w-4 mr-3"/> Exit
                         </Button>
                     </Link>
                 ) : (

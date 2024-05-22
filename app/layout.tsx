@@ -1,7 +1,8 @@
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 import "./globals.css";
-import {ClerkProvider, SignedIn, SignedOut, SignInButton, UserButton} from "@clerk/nextjs";
+import {ClerkProvider, SignedOut, SignInButton} from "@clerk/nextjs";
+import ToastProvider from "@/components/providers/toast-provider";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -20,11 +21,12 @@ export default function RootLayout({
             <html lang="en">
             <body className={inter.className}>
             <SignedOut>
-                <SignInButton />
+                <SignInButton/>
             </SignedOut>
             {/*<SignedIn>
                 <UserButton />
             </SignedIn>*/}
+            <ToastProvider/>
             {children}
             </body>
             </html>

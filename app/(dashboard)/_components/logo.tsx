@@ -1,16 +1,17 @@
 import React from 'react';
 import Image from "next/image";
+import Link from "next/link";
 
 const Logo = () => {
     return (
-        <div>
+        <Link href="/">
             <Image
                 src='/logo.svg'
                 alt="logo"
                 height={130}
                 width={130}
             />
-        </div>
+        </Link>
     );
 };
 
